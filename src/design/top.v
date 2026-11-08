@@ -34,4 +34,14 @@ module top (
         .v_count(vga_y)
     );
 
+    pixel_gen pixel_gen_inst (
+        .x(vga_x),
+        .y(vga_y),
+        .video_on(video_on),
+
+        .vga_red(vga_red),
+        .vga_green(vga_green),
+        .vga_blue(vga_blue)
+    );
+
 endmodule
